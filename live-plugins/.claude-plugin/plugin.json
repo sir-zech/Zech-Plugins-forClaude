@@ -1,0 +1,17 @@
+{
+  "name": "live-plugins",
+  "description": "Show all installed Claude Code plugins and which ones are live (enabled), right in the terminal. Adds the /plugins-live command.",
+  "version": "0.1.0",
+  "author": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "keywords": [
+    "plugins",
+    "list",
+    "enabled",
+    "manage",
+    "marketplace"
+  ],
+  "license": "MIT"
+}

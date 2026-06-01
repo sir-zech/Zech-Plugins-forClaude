@@ -1,0 +1,32 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "zech-plugins",
+  "description": "Statusline and productivity plugins for Claude Code: live plugin chips, a plan/context usage meter, and a text-to-diagram tool.",
+  "owner": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "live-plugins",
+      "source": "./live-plugins",
+      "description": "List installed plugins (/plugins-live) and show the live ones as colored [CHIP] tags in the statusline.",
+      "version": "0.1.0",
+      "category": "productivity"
+    },
+    {
+      "name": "token-meter",
+      "source": "./token-meter",
+      "description": "Live statusline meter: 5-hour plan usage + context window + cost, with the live-plugins chip row.",
+      "version": "0.1.0",
+      "category": "productivity"
+    },
+    {
+      "name": "diagrammer",
+      "source": "./diagrammer",
+      "description": "Draw use-case, control-flow, and data-flow diagrams from plain text via Mermaid, PlantUML, and Graphviz.",
+      "version": "0.1.0",
+      "category": "productivity"
+    }
+  ]
+}

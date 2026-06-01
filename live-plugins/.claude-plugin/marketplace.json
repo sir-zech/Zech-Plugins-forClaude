@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "live-plugins",
+  "description": "List installed Claude Code plugins and show which are enabled (live).",
+  "owner": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "live-plugins",
+      "description": "Show all installed plugins and which are live (enabled), with scope and version.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

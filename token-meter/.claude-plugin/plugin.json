@@ -1,0 +1,19 @@
+{
+  "name": "token-meter",
+  "description": "Live context-token usage meter for the Claude Code statusline: used/limit, a colored bar, percent, tokens-left and session cost. Updates every turn in the terminal. Preserves the caveman tag.",
+  "version": "0.1.0",
+  "author": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "keywords": [
+    "statusline",
+    "tokens",
+    "context",
+    "usage",
+    "limit",
+    "meter",
+    "cost"
+  ],
+  "license": "MIT"
+}

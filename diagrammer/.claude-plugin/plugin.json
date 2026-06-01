@@ -1,0 +1,22 @@
+{
+  "name": "diagrammer",
+  "description": "Draw software diagrams from plain-language descriptions. Picks the right tool per type: Use Case (PlantUML), Control Flow / flowchart (Mermaid), Data Flow Diagram / DFD (Graphviz or PlantUML). Emits diagram source and renders to SVG/PNG.",
+  "version": "0.1.0",
+  "author": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "keywords": [
+    "diagram",
+    "uml",
+    "use-case",
+    "control-flow",
+    "flowchart",
+    "dfd",
+    "data-flow",
+    "mermaid",
+    "plantuml",
+    "graphviz"
+  ],
+  "license": "MIT"
+}

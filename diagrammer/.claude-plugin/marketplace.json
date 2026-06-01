@@ -1,0 +1,18 @@
+
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "diagrammer",
+  "description": "Diagram-drawing plugin: use case, control flow, and data flow diagrams via Mermaid, PlantUML, and Graphviz.",
+  "owner": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "diagrammer",
+      "description": "Draw use case, control flow, and DFD diagrams from descriptions; emits source and renders to SVG/PNG.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

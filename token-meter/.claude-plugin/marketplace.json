@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "token-meter",
+  "description": "Live context-token usage meter for the Claude Code statusline.",
+  "owner": {
+    "name": "sir-zech",
+    "email": "officialnaveenb@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "token-meter",
+      "description": "Statusline meter: token usage toward the context limit, live in the terminal.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

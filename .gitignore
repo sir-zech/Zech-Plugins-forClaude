@@ -1,0 +1,16 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+*.log
+
+# Local Claude Code state — do not publish
+.claude/
+
+# Scratch / test artifacts
+**/_payload*.json
+**/_t.json
+**/_test-input.json
+**/tool-results/
