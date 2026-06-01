@@ -30,14 +30,25 @@ A **Claude Code marketplace** is just a public git repo with a `.claude-plugin/m
 
 ### 1. Add the marketplace
 
+Run inside Claude Code (the `owner/repo` shorthand resolves to HTTPS):
+
 ```text
 /plugin marketplace add sir-zech/Zech-Plugins-forClaude
 ```
 
-> 💡 Prefer a local checkout? Clone the repo and add the path instead:
+> 💡 Or pass the full HTTPS URL — equivalent:
 > ```text
-> /plugin marketplace add "/path/to/Zech-Plugins-forClaude"
+> /plugin marketplace add https://github.com/sir-zech/Zech-Plugins-forClaude.git
 > ```
+> ⚠️ Don't use the SSH form (`git@github.com:...`) unless your SSH keys and `known_hosts` are set up — it fails with a host-key error. HTTPS needs no setup for a public repo.
+
+Confirm it registered:
+
+```text
+/plugin marketplace list
+```
+
+You should see **zech-plugins** with 3 plugins.
 
 ### 2. Install the plugins you want
 
