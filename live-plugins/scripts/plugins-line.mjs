@@ -1,7 +1,7 @@
 // live-plugins: render the live (enabled) plugins as colored [CHIP] tags for the
 // statusline, à la [CAVEMAN]. Each plugin gets its own color, cycling from orange.
 //
-//   [CAVEMAN] [FRONTEND-DESIGN] [LIVE-PLUGINS] [TOKEN-METER]
+//   [CAVEMAN] [FRONTEND-DESIGN] [LIVE-PLUGINS]
 //
 // "live" = enabledPlugins["name@marketplace"] === true in <config>/settings.json.
 // Returns a one-line string, or null when there's nothing to show. Honors NO_COLOR
@@ -38,9 +38,15 @@ export function pluginsLine(opts = {}) {
   if (!installed || !installed.plugins) return null;
   const enabled = (readJSON(join(configDir, 'settings.json')) || {}).enabledPlugins || {};
 
+  // token-meter renders this very row, so its own [TOKEN-METER] chip is just noise — drop
+  // it. Override the hidden set with LIVE_PLUGINS_HIDE (comma-separated plugin names).
+  const hide = new Set((process.env.LIVE_PLUGINS_HIDE ?? 'token-meter')
+    .split(',').map((s) => s.trim().toLowerCase()).filter(Boolean));
+
   const live = Object.keys(installed.plugins)
     .filter((k) => enabled[k] === true)
     .map((k) => { const key = clean(k); const at = key.lastIndexOf('@'); return at > 0 ? key.slice(0, at) : key; })
+    .filter((n) => !hide.has(n.toLowerCase()))
     .sort((a, b) => a.localeCompare(b));
 
   if (live.length === 0) return paint('38;5;244', '[ no live plugins ]');

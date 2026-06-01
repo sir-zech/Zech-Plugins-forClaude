@@ -9,7 +9,7 @@
 //   cost.total_cost_usd                                 -> session cost
 //
 // Renders, e.g.:
-//   [CAVEMAN] ⬡ Opus 4.8 · ▕██░░░░░░░░░░▏ 14% 5h (4h31m left) · ctx 36% · $0.21
+//   [CAVEMAN] ❋ Opus 4.8 max · ▕██░░░░░░░░░░▏ 14% 5h (4h31m left) · ctx 36% · $0.21
 //
 // Env: TOKEN_METER_WIDTH (bar cells, default 12), NO_COLOR. Needs Claude Code
 // >= 2.1.132 for the native fields; older versions fall back to the transcript.
@@ -137,7 +137,13 @@ async function main() {
   const segs = [];
 
   const model = data.model && data.model.display_name;
-  if (model) segs.push(paint('38;5;38', '⬡ ' + model));
+  if (model) {
+    let seg = paint('38;5;172', '❋ ' + model);
+    // effort.level: low|medium|high|xhigh|max — present only when the model supports it.
+    const effort = data.effort && data.effort.level;
+    if (effort) seg += ' ' + paint('38;5;141', effort);
+    segs.push(seg);
+  }
 
   // PRIMARY: 5-hour plan usage (the subscription limit that actually throttles you).
   const five = data.rate_limits && data.rate_limits.five_hour;

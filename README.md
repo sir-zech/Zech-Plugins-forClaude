@@ -89,7 +89,7 @@ Shows every installed plugin and which ones are **live** (enabled), right in the
 Live plugins also render as colored `[CHIP]` tags in the statusline:
 
 ```text
-[CAVEMAN] [FRONTEND-DESIGN] [LIVE-PLUGINS] [TOKEN-METER]
+[CAVEMAN] [FRONTEND-DESIGN] [LIVE-PLUGINS]
 ```
 
 - `/plugins-live` — pretty table
@@ -109,7 +109,7 @@ A live statusline meter. After installing, wire it in:
 It points `settings.json` at the meter and re-renders the `[CAVEMAN]` tag plus the live-plugins chip row.
 
 ```text
-[CAVEMAN] ⬡ Opus 4.8 · ▕██░░░░░░░░░░▏ 14% 5h (4h31m left) · ctx 36% · $0.21
+[CAVEMAN] ❋ Opus 4.8 max · ▕██░░░░░░░░░░▏ 14% 5h (4h31m left) · ctx 36% · $0.21
 ```
 
 → Details: **[token-meter/README.md](./token-meter/README.md)**
